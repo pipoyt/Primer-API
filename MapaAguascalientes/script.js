@@ -7,6 +7,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
  attribution: '© OpenStreetMap'
 }).addTo(map);
 
+
+var iconoAguascalientes = L.icon({
+    iconUrl: 'Catedral.jpg', 
+    iconSize: [45, 45], 
+    iconAnchor: [20, 40], 
+    popupAnchor: [20, -52] 
+});
+var marker = L.marker([21.8807, -102.2969], {icon: iconoAguascalientes}).addTo(map);
+marker.bindPopup("<b>¡Catedral de Aguascalientes!</b><br>Catedral del centro del Estado.").openPopup();
 // Añadir un marcador en Aguascalientes capital
 var marker = L.marker([21.88234, -102.28259]).addTo(map);
 // Añadir un pop-up al marcador
@@ -18,6 +27,15 @@ plazaPatria.bindPopup("<b>Plaza de la Patria</b><br>Corazón de Aguascalientes."
 // Marcador en el Museo Nacional de la Muerte
 var museoMuerte = L.marker([21.88417, -102.28878]).addTo(map);
 museoMuerte.bindPopup("<b>Museo Nacional de la Muerte</b><br>Un lugar único.");
+
+var iconoAguascalientes = L.icon({
+    iconUrl: 'ReinaBurger.jpg', 
+    iconSize: [45, 45], 
+    iconAnchor: [20, 40], 
+    popupAnchor: [20, -52] 
+});
+var marker = L.marker([21.8462324,-102.2460193], {icon: iconoAguascalientes}).addTo(map);
+marker.bindPopup("<b>¡Reina burguer!</b><br>Las mejores hamburguesas del estado.").openPopup();
 
 // Dibujar un círculo en el recinto de la Feria Nacional de San Marcos
 var feriaSanMarcos = L.circle([21.87888, -102.29727], {
